@@ -1,0 +1,107 @@
+:root{
+  --navy:#001f3f;
+  --blue-700:#004080;
+  --blue-600:#005fa3;
+  --blue-500:#0077cc;
+  --cyan:#00aaff;
+  --yellow:#ffdd57;
+  --text:#2b2b2b;
+  --bg:#f8fbfd;
+  --card:#ffffff;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color:var(--text);
+  background:var(--bg);
+  line-height:1.6;
+}
+.hero{
+  background:linear-gradient(135deg, var(--navy), var(--blue-600), var(--cyan)),
+             url('https://source.unsplash.com/1600x900/?plumber,work') center/cover no-repeat;
+  color:#fff;
+  text-align:center;
+  padding:120px 20px;
+  position:relative;
+}
+.hero::after{
+  content:'';
+  position:absolute;inset:0;
+  background:linear-gradient(180deg, rgba(0,0,0,.25), rgba(0,0,0,.15));
+}
+.hero__inner{position:relative; z-index:1; max-width:950px; margin:0 auto;}
+.hero h1{font-size:3rem;margin:0 0 12px}
+.hero p{font-size:1.25rem;opacity:.95}
+.hero__cta{margin-top:24px; display:flex; gap:14px; justify-content:center; flex-wrap:wrap}
+.btn{
+  display:inline-block; padding:12px 22px; border-radius:8px;
+  text-decoration:none; font-weight:700; transition:transform .15s ease, filter .2s;
+}
+.btn:hover{transform:translateY(-1px); filter:brightness(1.05)}
+.btn--light{background:#fff;color:#333}
+.btn--accent{background:var(--yellow);color:#333}
+.site-nav{
+  position:sticky; top:0; z-index:10;
+  display:flex; justify-content:center; gap:28px;
+  background:linear-gradient(90deg, var(--navy), #0b2c57, var(--blue-500));
+  padding:14px 10px;
+}
+.site-nav a{color:#fff; text-decoration:none; font-weight:700}
+.site-nav a:hover{color:var(--yellow)}
+.container{max-width:1150px; margin:0 auto; padding:60px 20px}
+.section-title{
+  text-align:center; font-size:2.1rem; color:var(--blue-700);
+  margin:0 0 34px; position:relative;
+}
+.section-title::after{
+  content:""; display:block; width:68px; height:4px; background:var(--yellow);
+  margin:10px auto 0; border-radius:3px;
+}
+.section-title--light{color:#fff}
+.services{
+  display:flex; flex-wrap:wrap; justify-content:center; gap:28px;
+  background:linear-gradient(180deg, #ffffff, #f0f8ff);
+  padding:34px; border-radius:14px;
+  box-shadow:0 10px 30px rgba(0,0,0,.06);
+}
+.service-card{
+  width:300px; border-radius:12px; overflow:hidden;
+  background:linear-gradient(180deg,#fff,#e6f0ff);
+  box-shadow:0 6px 18px rgba(0,0,0,.1);
+  transition:transform .2s, box-shadow .2s;
+}
+.service-card:nth-child(2){background:linear-gradient(180deg,#fff,#e6fff5)}
+.service-card:nth-child(3){background:linear-gradient(180deg,#fff,#fff0e6)}
+.service-card:nth-child(4){background:linear-gradient(180deg,#fff,#fff6e6)}
+.service-card:hover{transform:translateY(-8px) scale(1.02); box-shadow:0 12px 26px rgba(0,0,0,.16)}
+.service-card img{width:100%; height:200px; object-fit:cover}
+.service-card__content{padding:18px; text-align:center}
+.service-card__content h3{margin:6px 0 8px; color:var(--blue-700)}
+.testimonials{
+  background:linear-gradient(135deg, var(--blue-600), var(--blue-500), var(--cyan));
+  color:#fff; border-radius:14px; margin:40px 20px 0; box-shadow:0 10px 30px rgba(0,0,0,.12);
+}
+.testimonial{
+  max-width:760px; margin:18px auto; padding:18px 22px;
+  background:rgba(255,255,255,.15); border-radius:10px; font-style:italic;
+  box-shadow:0 4px 12px rgba(0,0,0,.2);
+}
+.testimonial cite{display:block; text-align:right; margin-top:8px; color:var(--yellow); font-style:normal; font-weight:700}
+.testimonial__image{display:block; margin:28px auto 40px; max-width:520px; border-radius:12px; box-shadow:0 10px 22px rgba(0,0,0,.25)}
+.contact{
+  background:linear-gradient(135deg, var(--navy), var(--blue-700), var(--blue-500), var(--cyan));
+  color:#fff; border-radius:14px; margin:60px 20px 0; box-shadow:0 10px 30px rgba(0,0,0,.12);
+}
+.contact__inner{display:grid; grid-template-columns:1.1fr .9fr; gap:24px; align-items:center}
+.contact h2{color:var(--yellow); margin-top:0}
+.contact a{color:var(--yellow)}
+.contact__image-wrap img{width:100%; height:auto; border-radius:12px; box-shadow:0 8px 18px rgba(0,0,0,.25)}
+@media (max-width: 900px){
+  .contact__inner{grid-template-columns:1fr}
+}
+.site-footer{
+  text-align:center; padding:22px 10px; margin:44px 0 0;
+  background:linear-gradient(90deg, var(--navy), #111, var(--navy)); color:#ddd;
+}
